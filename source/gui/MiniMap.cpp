@@ -123,6 +123,7 @@ void CMiniMap::HandleMessage(SGUIMessage &Message)
 		}
 	case GUIM_MOUSE_RELEASE_RIGHT:
 		{
+			LOGWARNING(L"GUIM_MOUSE_RELEASE_RIGHT");
 			CMiniMap::FireWorldClickEvent(SDL_BUTTON_RIGHT, 1);
 			break;
 		}
