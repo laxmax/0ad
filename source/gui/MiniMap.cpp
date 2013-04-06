@@ -187,6 +187,8 @@ void CMiniMap::FireWorldClickEvent(int button, int clicks)
 	float x, z;
 	GetMouseWorldCoordinates(x, z);
 
+	LOGWARNING(L"CMiniMap::FireWorldClickEvent");
+
 	CScriptValRooted coords;
 	g_ScriptingHost.GetScriptInterface().Eval("({})", coords);
 	g_ScriptingHost.GetScriptInterface().SetProperty(coords.get(), "x", x, false);
